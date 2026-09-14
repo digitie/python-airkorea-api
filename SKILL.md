@@ -8,7 +8,7 @@
 ## 1. 정체성
 
 이 저장소(Python 패키지 이름 `airkorea`, GitHub 저장소 `python-airkorea-api`)는 한국환경공단 AirKorea OpenAPI(공공데이터포털 B552584)를 Python 3.10+ 환경에서 효율적으로 호출할 수 있도록 돕는 **비공식 API 클라이언트 라이브러리**다. 
-downstream 서비스가 직접 안정적으로 사용할 수 있는 비동기/동기 하이브리드 HTTP 클라이언트, Pydantic 모델, 좌표계 변환 기능을 제공한다.
+downstream 서비스가 직접 안정적으로 사용할 수 있는 비동기 전용 HTTP 클라이언트, Pydantic 모델, 좌표계 변환 기능을 제공한다.
 
 ### 식별자 매핑
 
