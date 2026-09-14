@@ -3,6 +3,8 @@
 
 from __future__ import annotations
 
+import asyncio
+
 import inspect
 import json
 import sys
@@ -29,6 +31,7 @@ except ModuleNotFoundError as exc:  # pragma: no cover - 선택 실행 도구
 from airkorea import (
     DEBUGGABLE_METHODS,
     AirKoreaClient,
+    DebugRun,
     ParamSpec,
     __version__,
     api_catalog_dicts,
@@ -163,12 +166,13 @@ def _run(
         st.error("서비스키가 필요합니다. 환경변수, .env, 또는 사이드바 입력을 확인하세요.")
         return
 
-    client = AirKoreaClient(
-        service_key=normalized_key,
-        timeout=timeout,
-        retries=0,
-    )
-    run = run_debug_method(client, selected_function, input_data)
+    async def fetch() -> DebugRun:
+        async with AirKoreaClient(
+            service_key=normalized_key, timeout=timeout, retries=0,
+        ) as client:
+            return await run_debug_method(client, selected_function, input_data)
+
+    run = asyncio.run(fetch())
     _store_debug_run(data_source, selected_function, run)
 
 
