@@ -119,3 +119,8 @@ AirKorea 응답은 서비스와 시점에 따라 `body.items`가 list, dict, `it
 ## 범위 밖
 
 이 프로젝트는 AirKorea 대기질 API 전용입니다. 한국환경공단이 같은 제공기관 코드로 제공하는 비점오염원, 재활용, 냉매 등 비-AirKorea 서비스는 포함하지 않습니다.
+
+## 로컬 원문 재해석
+
+`parse_measurement`을 패키지 root에서 제공한다. 네트워크 endpoint를 추가하지 않으며
+[공개 입력·DTO·예외와 신뢰 경계](docs/raw-replay.md)를 따른다.

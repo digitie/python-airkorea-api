@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-23 — 원문 재해석 API 공개
+
+기존 파서를 `parse_measurement`로 공개하고 HTTP client도 같은 함수를 사용한다.
+DTO·raw·코드·시각·기존 오류 의미를 유지하며 네트워크 호출은 추가하지 않는다.
+[단일 행/장소 계약과 신뢰 경계](docs/raw-replay.md)를 명시하고 오프라인 회귀를 추가했다.
+
+
 ## [Unreleased]
 
 ### Changed

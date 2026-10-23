@@ -279,3 +279,8 @@ python -m mypy src/airkorea
 ## 법적 고지
 
 GPL-3.0-or-later 라이선스는 이 저장소에 포함된 소스 코드와 문서에만 적용됩니다. 자세한 조건은 [LICENSE](LICENSE)를 확인하십시오. 한국환경공단 AirKorea OpenAPI와 공공데이터포털이 제공하는 원본 데이터는 각 제공 기관의 이용약관, 저작권, 재배포 조건을 따르며 이 저장소의 라이선스와는 별개입니다. 이 패키지는 AirKorea API 호출을 돕는 기술 도구이며, 대기질 데이터의 정확성이나 법적 효력을 보장하지 않습니다.
+
+## 저장 원문의 오프라인 재해석
+
+`parse_measurement`은 기존 HTTP client와 같은 파서의 공개 함수다.
+[사용법과 단일 행/장소 신뢰 경계](docs/raw-replay.md)를 따른다.

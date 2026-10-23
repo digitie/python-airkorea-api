@@ -251,3 +251,7 @@ item_code = normalize_pollutant_code("pm2.5")
 sido_name = validate_sido_name("서울")
 point = coerce_latlon({"lat": "37.5665", "lon": "126.9780"})
 ```
+
+## 저장 원문 재해석
+
+`from airkorea import parse_measurement`를 사용할 수 있다. [계약과 신뢰 경계](raw-replay.md).
